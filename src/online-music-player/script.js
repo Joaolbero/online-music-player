@@ -290,23 +290,20 @@ function handleFilesSelected(event) {
   if (!files || !files.length) {
     return;
   }
+
   Array.from(files).forEach(file => {
     const objectUrl = URL.createObjectURL(file);
     const tempAudio = document.createElement("audio");
     tempAudio.src = objectUrl;
+
     tempAudio.addEventListener("loadedmetadata", () => {
-      const duration = tempAudio.duration;
-      if (duration > 900) {
-        alert(`A faixa "${file.name}" ultrapassa 15 minutos e não será adicionada.`);
-        URL.revokeObjectURL(objectUrl);
-        return;
-      }
+      const duration = tempAudio.duration || 0;
       const title = file.name.replace(/\.[^/.]+$/, "");
       const newTrack = {
         title,
         artist: "Local file",
         file: objectUrl,
-        lengthDisplay: formatTime(duration)
+        lengthDisplay: duration ? formatTime(duration) : ""
       };
       tracks.push(newTrack);
       buildPlaylist();
