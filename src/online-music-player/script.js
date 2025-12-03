@@ -359,17 +359,14 @@ function handleKeyDown(event) {
     event.preventDefault();
   }
   if (event.code === "ArrowLeft") {
-    if (audio.duration) {
-      audio.currentTime = Math.max(0, audio.currentTime - 5);
-    }
-    event.preventDefault();
-  }
-  if (event.code === "ArrowRight") {
-    if (audio.duration) {
-      audio.currentTime = Math.min(audio.duration, audio.currentTime + 5);
-    }
-    event.preventDefault();
-  }
+  seekRelative(-5);
+  event.preventDefault();
+}
+if (event.code === "ArrowRight") {
+  seekRelative(5);
+  event.preventDefault();
+}
+
 }
 
 function handleKeyUp(event) {
