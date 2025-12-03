@@ -15,6 +15,8 @@ const repeatBtn = document.getElementById("repeat-btn");
 const shuffleBtn = document.getElementById("shuffle-btn");
 const nowPlayingLabel = document.getElementById("now-playing-label");
 const fileInput = document.getElementById("file-input");
+const seekBackBtn = document.getElementById("seek-back-btn");
+const seekForwardBtn = document.getElementById("seek-forward-btn");
 
 let tracks = [
   {
