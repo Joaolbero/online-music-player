@@ -408,6 +408,8 @@ shuffleBtn.addEventListener("click", toggleShuffle);
 fileInput.addEventListener("change", handleFilesSelected);
 window.addEventListener("keydown", handleKeyDown);
 window.addEventListener("keyup", handleKeyUp);
+seekBackBtn.addEventListener("click", () => seekRelative(-5));
+seekForwardBtn.addEventListener("click", () => seekRelative(5));
 
 window.addEventListener("load", () => {
   buildPlaylist();
