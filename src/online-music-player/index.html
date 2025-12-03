@@ -32,6 +32,7 @@
         <div class="track-info">
           <h2 id="track-title">Track Title</h2>
           <p id="track-artist">Artist</p>
+          <p id="now-playing-label" class="now-playing-label"></p>
         </div>
 
         <div class="controls">
@@ -41,19 +42,27 @@
           </div>
           <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
           <div class="buttons-row">
+            <button id="repeat-btn" class="control-btn control-btn-small">⟲</button>
             <button id="prev-btn" class="control-btn">⏮</button>
             <button id="play-btn" class="control-btn control-btn-main">▶</button>
             <button id="next-btn" class="control-btn">⏭</button>
+            <button id="shuffle-btn" class="control-btn control-btn-small">🔀</button>
           </div>
           <div class="volume-row">
-            <span class="volume-icon">🔊</span>
+            <button id="mute-btn" class="mute-btn">🔊</button>
             <input type="range" id="volume-bar" min="0" max="1" step="0.01" value="0.8">
           </div>
         </div>
       </section>
 
       <aside class="playlist-panel">
-        <h3>Playlist</h3>
+        <div class="playlist-header">
+          <h3>Playlist</h3>
+          <label class="file-input-label">
+            <span>+ Add tracks</span>
+            <input type="file" id="file-input" accept="audio/*" multiple>
+          </label>
+        </div>
         <ul id="playlist"></ul>
       </aside>
     </main>
