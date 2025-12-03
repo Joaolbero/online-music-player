@@ -13,23 +13,17 @@ const discEl = document.querySelector(".disc");
 
 const tracks = [
   {
-    title: "Cyber Skyline",
-    artist: "Albero",
-    file: "assets/music/track1.mp3",
-    lengthDisplay: "3:24"
+    title: "Fases",
+    artist: "Aka Rasta",
+    file: "assets/music/Aka Rasta - Fases.mp3",
+    lengthDisplay: "03:39"
   },
   {
-    title: "Neon Waves",
-    artist: "Russo",
-    file: "assets/music/track2.mp3",
-    lengthDisplay: "4:02"
+    title: "Ofício",
+    artist: "Leviano",
+    file: "assets/music/Leviano - Ofício.mp3",
+    lengthDisplay: "02:54"
   },
-  {
-    title: "Midnight Circuit",
-    artist: "João",
-    file: "assets/music/track3.mp3",
-    lengthDisplay: "2:57"
-  }
 ];
 
 let currentTrackIndex = 0;

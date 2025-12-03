@@ -45,11 +45,9 @@ body {
   padding: 20px;
   border-radius: 24px;
   background: linear-gradient(135deg, rgba(15, 15, 35, 0.9), rgba(0, 0, 0, 0.96));
-  box-shadow:
-    0 0 40px rgba(9, 132, 227, 0.2),
-    0 0 6px rgba(9, 132, 227, 0.5);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(14px);
-  border: 1px solid rgba(9, 132, 227, 0.4);
+  border: 1px solid rgba(9, 132, 227, 0.15);
 }
 
 .app-header {
