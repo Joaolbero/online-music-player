@@ -78,6 +78,14 @@ function getNextIndex() {
   return (currentTrackIndex + 1) % tracks.length;
 }
 
+function seekRelative(seconds) {
+  if (!audio.duration) {
+    return;
+  }
+  const newTime = Math.min(Math.max(0, audio.currentTime + seconds), audio.duration);
+  audio.currentTime = newTime;
+}
+
 function setTrack(index) {
   currentTrackIndex = index;
   const track = tracks[currentTrackIndex];
