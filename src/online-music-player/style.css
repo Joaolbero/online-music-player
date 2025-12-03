@@ -168,6 +168,12 @@ body {
   color: #a4b0be;
 }
 
+.now-playing-label {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #74b9ff;
+}
+
 .controls {
   display: flex;
   flex-direction: column;
@@ -224,9 +230,19 @@ body {
   background: linear-gradient(135deg, #1e3799, #0984e3);
 }
 
+.control-btn-small {
+  padding-inline: 12px;
+  font-size: 0.95rem;
+}
+
 .control-btn:active {
   transform: scale(0.96);
   box-shadow: 0 0 4px rgba(9, 132, 227, 0.6);
+}
+
+.control-btn.mode-active {
+  background: linear-gradient(135deg, #0fbcf9, #1e3799);
+  box-shadow: 0 0 14px rgba(9, 132, 227, 0.9);
 }
 
 .volume-row {
@@ -235,6 +251,22 @@ body {
   gap: 8px;
   font-size: 0.9rem;
   color: #dcdde1;
+}
+
+.mute-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: radial-gradient(circle, #1e272e, #000000);
+  color: #f5f6fa;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(9, 132, 227, 0.4);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.mute-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 4px rgba(9, 132, 227, 0.6);
 }
 
 #volume-bar {
@@ -265,9 +297,34 @@ body {
   overflow-y: auto;
 }
 
-.playlist-panel h3 {
+.playlist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 10px;
+}
+
+.playlist-panel h3 {
   font-size: 1rem;
+}
+
+.file-input-label {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  background: linear-gradient(135deg, #1e3799, #0fbcf9);
+  color: #f5f6fa;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(9, 132, 227, 0.6);
+}
+
+.file-input-label input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
 }
 
 #playlist {
@@ -307,6 +364,11 @@ body {
   color: #a4b0be;
 }
 
+#playlist li .track-status {
+  font-size: 0.7rem;
+  color: #74b9ff;
+}
+
 #playlist li .track-length {
   font-size: 0.78rem;
   color: #ced6e0;
@@ -321,6 +383,10 @@ body {
 #playlist li.active {
   background: linear-gradient(135deg, #1e3799, #0fbcf9);
   box-shadow: 0 0 12px rgba(9, 132, 227, 0.9);
+}
+
+#playlist li.upnext {
+  border: 1px dashed rgba(116, 185, 255, 0.8);
 }
 
 #playlist li.active .track-meta .track-artist,
