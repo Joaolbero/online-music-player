@@ -29,6 +29,18 @@ let tracks = [
     file: "assets/music/Leviano - Ofício.mp3",
     lengthDisplay: "02:54"
   },
+  {
+    title: "Alexa",
+    artist: "LH Chucro",
+    file: "assets/music/LH Chucro - Alexa.mp3",
+    lengthDisplay: "02:34"
+  },
+  {
+    title: "Poetas no Topo 4",
+    artist: "Jotapê, Cesar Mc, Sain, Dk47, Leall, Don L, Ajuliacosta, Major RD, Xamã, Bc Raff & Froid",
+    file: "assets/music/Poetas no Topo 4 - Jotapê, Cesar Mc, Sain, Dk47, Leall, Don L, Ajuliacosta, Major RD, Xamã, Bc Raff & Froid.mp3",
+    lengthDisplay: "17:53"
+  },
 ];
 
 let currentTrackIndex = 0;
