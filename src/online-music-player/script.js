@@ -17,6 +17,8 @@ const nowPlayingLabel = document.getElementById("now-playing-label");
 const fileInput = document.getElementById("file-input");
 const seekBackBtn = document.getElementById("seek-back-btn");
 const seekForwardBtn = document.getElementById("seek-forward-btn");
+const coverImageEl = document.querySelector(".cover-image");
+const DEFAULT_COVER = "assets/img/default-cover.png";
 
 let tracks = [
   {
