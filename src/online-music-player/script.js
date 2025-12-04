@@ -93,7 +93,14 @@ function setTrack(index) {
   const track = tracks[currentTrackIndex];
   audio.src = track.file;
   trackTitleEl.textContent = track.title;
-  trackArtistEl.textContent = track.artist;
+  trackArtistEl.textContent = track.artist;  
+  if (coverImageEl) {
+    if (track.cover) {
+      coverImageEl.src = track.cover;
+    } else {
+      coverImageEl.src = DEFAULT_COVER;
+    }
+  }
   nowPlayingLabel.textContent = "Now playing";
   updatePlaylistActive();
 }
