@@ -455,3 +455,6 @@ body {
     padding: 12px;
   }
 }
+.disc-center {
+  display: none !important;
+}
