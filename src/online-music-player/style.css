@@ -409,6 +409,19 @@ body {
   }
 }
 
+.cover-image {
+  position: absolute;
+  inset: 22px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 0 12px rgba(9, 132, 227, 0.9);
+  transform-origin: 50% 50%;
+}
+
+.disc.playing .cover-image {
+  animation: discSpin 5s linear infinite;
+}
+
 @media (max-width: 540px) {
   .app-container {
     margin: 8px;
