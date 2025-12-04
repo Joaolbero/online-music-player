@@ -44,7 +44,7 @@ let tracks = [
     artist: "Jotapê, Cesar Mc, Sain, Dk47, Leall, Don L, Ajuliacosta, Major RD, Xamã, Bc Raff & Froid",
     file: "assets/music/Poetas no Topo 4 - Jotapê, Cesar Mc, Sain, Dk47, Leall, Don L, Ajuliacosta, Major RD, Xamã, Bc Raff & Froid.mp3",
     lengthDisplay: "17:53"
-  },
+  }
 ];
 
 let currentTrackIndex = 0;
@@ -93,7 +93,7 @@ function setTrack(index) {
   const track = tracks[currentTrackIndex];
   audio.src = track.file;
   trackTitleEl.textContent = track.title;
-  trackArtistEl.textContent = track.artist;  
+  trackArtistEl.textContent = track.artist;
   if (coverImageEl) {
     if (track.cover) {
       coverImageEl.src = track.cover;
@@ -325,6 +325,7 @@ function handleKeyDown(event) {
   if (activeTag === "INPUT") {
     return;
   }
+
   if (event.code === "Space") {
     if (spacePressedAt === null) {
       spacePressedAt = Date.now();
@@ -337,6 +338,7 @@ function handleKeyDown(event) {
     }
     event.preventDefault();
   }
+
   if (event.code === "ArrowUp") {
     const step = 0.05;
     const newVol = Math.min(1, (audio.volume || 0) + step);
@@ -349,6 +351,7 @@ function handleKeyDown(event) {
     }
     event.preventDefault();
   }
+
   if (event.code === "ArrowDown") {
     const step = 0.05;
     const newVol = Math.max(0, (audio.volume || 0) - step);
@@ -364,15 +367,16 @@ function handleKeyDown(event) {
     }
     event.preventDefault();
   }
-  if (event.code === "ArrowLeft") {
-  seekRelative(-5);
-  event.preventDefault();
-}
-if (event.code === "ArrowRight") {
-  seekRelative(5);
-  event.preventDefault();
-}
 
+  if (event.code === "ArrowLeft") {
+    seekRelative(-5);
+    event.preventDefault();
+  }
+
+  if (event.code === "ArrowRight") {
+    seekRelative(5);
+    event.preventDefault();
+  }
 }
 
 function handleKeyUp(event) {
@@ -380,6 +384,7 @@ function handleKeyUp(event) {
   if (activeTag === "INPUT") {
     return;
   }
+
   if (event.code === "Space") {
     if (spaceHoldTimeout) {
       clearTimeout(spaceHoldTimeout);
