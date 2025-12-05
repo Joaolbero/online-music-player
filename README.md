@@ -2,19 +2,26 @@
 
 [//]: # (Badges)
 <p align="center">
-  <!-- Ajustar depois com o nome real do repositório -->
-  <a href="https://github.com/Joaolbero/online-music-player">
-    <img alt="Repo size" src="https://img.shields.io/github/repo-size/Joaolbero/online-music-player?style=for-the-badge">
+
+  <!-- Repository -->
+  <img alt="Repo size" src="https://img.shields.io/github/repo-size/Joaolbero/online-music-player?color=1e90ff&style=for-the-badge">
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Joaolbero/online-music-player?color=1e90ff&style=for-the-badge">
+  <img alt="License" src="https://img.shields.io/github/license/Joaolbero/online-music-player?color=1e90ff&style=for-the-badge">
+  
+  <!-- Tech -->
+  <img alt="HTML" src="https://img.shields.io/badge/HTML-ff6347?style=for-the-badge&logo=html5&logoColor=white">
+  <img alt="CSS" src="https://img.shields.io/badge/CSS-1e90ff?style=for-the-badge&logo=css3&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-f7df1e?style=for-the-badge&logo=javascript&logoColor=000">
+
+  <!-- Status -->
+  <img alt="Status" src="https://img.shields.io/badge/STATUS-ACTIVE-32cd32?style=for-the-badge">
+  <img alt="Version" src="https://img.shields.io/badge/VERSION-1.0.0-1e90ff?style=for-the-badge">
+
+  <!-- Deploy (adiciona após ativar Pages) -->
+  <a href="https://joaolbero.github.io/online-music-player/">
+    <img alt="Demo" src="https://img.shields.io/badge/ONLINE%20DEMO-1e90ff?style=for-the-badge&logo=github">
   </a>
-  <a href="https://github.com/Joaolbero/online-music-player">
-    <img alt="Last commit" src="https://img.shields.io/github/last-commit/Joaolbero/online-music-player?style=for-the-badge">
-  </a>
-  <a href="https://github.com/Joaolbero/online-music-player/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/Joaolbero/online-music-player?style=for-the-badge">
-  </a>
-  <a href="https://github.com/Joaolbero/online-music-player/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/Joaolbero/online-music-player?style=for-the-badge">
-  </a>
+
 </p>
 
 ---
