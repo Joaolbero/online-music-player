@@ -563,3 +563,10 @@ body.light-theme #playlist li.active {
 body.light-theme .shortcuts-hint {
   color: #2d5c9e;
 }
+.playlist-info {
+  font-size: 0.75rem;
+  color: #a4b0be;
+}
+body.light-theme .playlist-info {
+  color: #576574;
+}
