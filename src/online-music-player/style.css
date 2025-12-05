@@ -82,6 +82,29 @@ body {
   color: #a4b0be;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1e3799, #0fbcf9);
+  color: #f5f6fa;
+  box-shadow: 0 0 10px rgba(9, 132, 227, 0.6);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 5px rgba(9, 132, 227, 0.8);
+}
+
 .player-layout {
   display: grid;
   grid-template-columns: 1.2fr 0.9fr;
