@@ -61,7 +61,6 @@
 | --- | --- |
 | Abaixo está um resumo da estrutura de pastas do projeto: | Below is a summary of the project folder structure: |
 
-```text
 assets/
   img/
     logo.png          # ícone do player / page icon
