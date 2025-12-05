@@ -7,6 +7,7 @@ const currentTimeEl = document.getElementById("current-time");
 const durationEl = document.getElementById("duration");
 const volumeBar = document.getElementById("volume-bar");
 const playlistEl = document.getElementById("playlist");
+const playlistInfoEl = document.getElementById("playlist-info");
 const trackTitleEl = document.getElementById("track-title");
 const trackArtistEl = document.getElementById("track-artist");
 const discEl = document.querySelector(".disc");
@@ -18,8 +19,15 @@ const fileInput = document.getElementById("file-input");
 const seekBackBtn = document.getElementById("seek-back-btn");
 const seekForwardBtn = document.getElementById("seek-forward-btn");
 const coverImageEl = document.querySelector(".cover-image");
-const DEFAULT_COVER = "assets/img/default-cover.png";
 const themeToggleBtn = document.getElementById("theme-toggle");
+const miniPlayer = document.getElementById("mini-player");
+const miniCover = document.getElementById("mini-cover");
+const miniTitle = document.getElementById("mini-title");
+const miniPlay = document.getElementById("mini-play");
+const miniProgress = document.getElementById("mini-progress");
+
+const DEFAULT_COVER = "assets/img/default-cover.png";
+
 let currentTheme = "dark";
 
 let tracks = [
@@ -117,6 +125,7 @@ function setTrack(index) {
   }
   nowPlayingLabel.textContent = "Now playing";
   updatePlaylistActive();
+  updateMiniPlayer();
 }
 
 function updatePlaylistActive() {
@@ -143,11 +152,40 @@ function updatePlaylistActive() {
   });
 }
 
+function updateMiniPlayer() {
+  const track = tracks[currentTrackIndex];
+  miniCover.src = track.cover || DEFAULT_COVER;
+  miniTitle.textContent = track.title;
+  miniPlay.textContent = isPlaying ? "⏸" : "▶";
+}
+
+function updatePlaylistInfo() {
+  if (!playlistInfoEl) {
+    return;
+  }
+  let totalSeconds = 0;
+  tracks.forEach(t => {
+    if (t.lengthDisplay) {
+      const parts = t.lengthDisplay.split(":");
+      if (parts.length === 2) {
+        const m = Number(parts[0]) || 0;
+        const s = Number(parts[1]) || 0;
+        totalSeconds += m * 60 + s;
+      }
+    }
+  });
+  const totalMin = Math.floor(totalSeconds / 60);
+  const totalSec = totalSeconds % 60;
+  const totalFormatted = `${totalMin}:${String(totalSec).padStart(2, "0")}`;
+  playlistInfoEl.textContent = `${tracks.length} tracks · ${totalFormatted} total`;
+}
+
 function playTrack() {
   audio.play();
   isPlaying = true;
   playBtn.textContent = "⏸";
   discEl.classList.add("playing");
+  updateMiniPlayer();
 }
 
 function pauseTrack() {
@@ -155,6 +193,7 @@ function pauseTrack() {
   isPlaying = false;
   playBtn.textContent = "▶";
   discEl.classList.remove("playing");
+  updateMiniPlayer();
 }
 
 function togglePlay() {
@@ -187,6 +226,7 @@ function handleTimeUpdate() {
   if (audio.duration) {
     const progress = (audio.currentTime / audio.duration) * 100;
     progressBar.value = progress;
+    miniProgress.value = progress;
     currentTimeEl.textContent = formatTime(audio.currentTime);
     durationEl.textContent = formatTime(audio.duration);
   }
@@ -306,24 +346,7 @@ function buildPlaylist() {
     playlistEl.appendChild(li);
   });
   updatePlaylistActive();
-  function updatePlaylistInfo() {
-  const infoEl = document.getElementById("playlist-info");
-
-  let totalSeconds = 0;
-
-  tracks.forEach(t => {
-    if (t.lengthDisplay) {
-      const [m, s] = t.lengthDisplay.split(":").map(Number);
-      totalSeconds += m * 60 + s;
-    }
-  });
-
-  const totalMin = Math.floor(totalSeconds / 60);
-  const totalSec = totalSeconds % 60;
-  const totalFormatted = `${totalMin}:${String(totalSec).padStart(2, "0")}`;
-
-  infoEl.textContent = `${tracks.length} tracks · ${totalFormatted} total`;
-}
+  updatePlaylistInfo();
 }
 
 function handleFilesSelected(event) {
@@ -331,12 +354,10 @@ function handleFilesSelected(event) {
   if (!files || !files.length) {
     return;
   }
-
   Array.from(files).forEach(file => {
     const objectUrl = URL.createObjectURL(file);
     const tempAudio = document.createElement("audio");
     tempAudio.src = objectUrl;
-
     tempAudio.addEventListener("loadedmetadata", () => {
       const duration = tempAudio.duration || 0;
       const title = file.name.replace(/\.[^/.]+$/, "");
@@ -357,7 +378,6 @@ function handleKeyDown(event) {
   if (activeTag === "INPUT") {
     return;
   }
-
   if (event.code === "Space") {
     if (spacePressedAt === null) {
       spacePressedAt = Date.now();
@@ -370,7 +390,6 @@ function handleKeyDown(event) {
     }
     event.preventDefault();
   }
-
   if (event.code === "ArrowUp") {
     const step = 0.05;
     const newVol = Math.min(1, (audio.volume || 0) + step);
@@ -383,7 +402,6 @@ function handleKeyDown(event) {
     }
     event.preventDefault();
   }
-
   if (event.code === "ArrowDown") {
     const step = 0.05;
     const newVol = Math.max(0, (audio.volume || 0) - step);
@@ -399,12 +417,10 @@ function handleKeyDown(event) {
     }
     event.preventDefault();
   }
-
   if (event.code === "ArrowLeft") {
     seekRelative(-5);
     event.preventDefault();
   }
-
   if (event.code === "ArrowRight") {
     seekRelative(5);
     event.preventDefault();
@@ -416,7 +432,6 @@ function handleKeyUp(event) {
   if (activeTag === "INPUT") {
     return;
   }
-
   if (event.code === "Space") {
     if (spaceHoldTimeout) {
       clearTimeout(spaceHoldTimeout);
@@ -450,6 +465,15 @@ window.addEventListener("keydown", handleKeyDown);
 window.addEventListener("keyup", handleKeyUp);
 seekBackBtn.addEventListener("click", () => seekRelative(-5));
 seekForwardBtn.addEventListener("click", () => seekRelative(5));
+miniPlay.addEventListener("click", togglePlay);
+miniProgress.addEventListener("input", () => {
+  if (!audio.duration) {
+    return;
+  }
+  const percent = parseFloat(miniProgress.value);
+  const newTime = (percent / 100) * audio.duration;
+  audio.currentTime = newTime;
+});
 
 themeToggleBtn.addEventListener("click", () => {
   const nextTheme = currentTheme === "dark" ? "light" : "dark";
@@ -463,7 +487,6 @@ window.addEventListener("load", () => {
   } else {
     applyTheme("dark");
   }
-
   buildPlaylist();
   setTrack(currentTrackIndex);
   volumeBar.value = 0.8;
