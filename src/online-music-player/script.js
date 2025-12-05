@@ -60,6 +60,18 @@ let spacePressedAt = null;
 let spaceSpeedActive = false;
 let spaceHoldTimeout = null;
 
+function applyTheme(theme) {
+  currentTheme = theme === "light" ? "light" : "dark";
+  if (currentTheme === "light") {
+    document.body.classList.add("light-theme");
+    themeToggleBtn.textContent = "Dark mode";
+  } else {
+    document.body.classList.remove("light-theme");
+    themeToggleBtn.textContent = "Light mode";
+  }
+  localStorage.setItem("onlineMusicPlayerTheme", currentTheme);
+}
+
 function formatTime(seconds) {
   const total = Math.floor(seconds);
   const m = Math.floor(total / 60);
