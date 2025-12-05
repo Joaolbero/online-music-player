@@ -433,6 +433,11 @@ window.addEventListener("keyup", handleKeyUp);
 seekBackBtn.addEventListener("click", () => seekRelative(-5));
 seekForwardBtn.addEventListener("click", () => seekRelative(5));
 
+themeToggleBtn.addEventListener("click", () => {
+  const nextTheme = currentTheme === "dark" ? "light" : "dark";
+  applyTheme(nextTheme);
+});
+
 window.addEventListener("load", () => {
   buildPlaylist();
   setTrack(currentTrackIndex);
