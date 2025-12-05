@@ -1,91 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Online Music Player</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Online Music Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="background-glitch"></div>
-    <div class="app-container">
-        <header class="app-header">
-            <div class="logo-area">
-                <img src="assets/img/logo.png" alt="Online Music Player Logo" class="logo-image">
-                <div class="logo-text">
-                    <h1>Online Music Player</h1>
-                </div>
-            </div>
+  <div class="background-glitch"></div>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo-area">
+        <img src="assets/img/logo.png" alt="Online Music Player Logo" class="logo-image">
+        <div class="logo-text">
+          <h1>Online Music Player</h1>
+        </div>
+      </div>
 
-            <div class="header-actions">
-                <button id="theme-toggle" class="theme-toggle">Light mode</button>
-            </div>
-        </header>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle">Light mode</button>
+      </div>
+    </header>
 
+    <main class="player-layout">
+      <section class="player-panel">
+        <div class="disc-wrapper">
+          <div class="disc-shadow"></div>
+          <div class="disc">
+            <img src="assets/img/default-cover.png" alt="Default cover" class="cover-image">
+            <div class="disc-center"></div>
+          </div>
+        </div>
 
-        <main class="player-layout">
-            <section class="player-panel">
-                <div class="disc-wrapper">
-                    <div class="disc-shadow"></div>
-                    <div class="disc">
-                        <img src="assets/img/default-cover.png" alt="Default cover" class="cover-image">
-                        <div class="disc-center"></div>
-                    </div>
-                </div>
+        <div class="track-info">
+          <h2 id="track-title">Track Title</h2>
+          <p id="track-artist">Artist</p>
+          <p id="now-playing-label" class="now-playing-label"></p>
+        </div>
 
+        <div class="controls">
+          <div class="time-row">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+          <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
+          <div class="buttons-row">
+            <button id="repeat-btn" class="control-btn control-btn-small">⟲</button>
+            <button id="seek-back-btn" class="control-btn control-btn-small">« 5s</button>
+            <button id="prev-btn" class="control-btn">⏮</button>
+            <button id="play-btn" class="control-btn control-btn-main">▶</button>
+            <button id="next-btn" class="control-btn">⏭</button>
+            <button id="seek-forward-btn" class="control-btn control-btn-small">5s »</button>
+            <button id="shuffle-btn" class="control-btn control-btn-small">🔀</button>
+          </div>
 
-                <div class="track-info">
-                    <h2 id="track-title">Track Title</h2>
-                    <p id="track-artist">Artist</p>
-                    <p id="now-playing-label" class="now-playing-label"></p>
-                </div>
+          <div class="volume-row">
+            <button id="mute-btn" class="mute-btn">🔊</button>
+            <input type="range" id="volume-bar" min="0" max="1" step="0.01" value="0.8">
+          </div>
 
-                <div class="controls">
-                    <div class="time-row">
-                        <span id="current-time">0:00</span>
-                        <span id="duration">0:00</span>
-                    </div>
-                    <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
-                    <div class="buttons-row">
-                        <button id="repeat-btn" class="control-btn control-btn-small">⟲</button>
-                        <button id="seek-back-btn" class="control-btn control-btn-small">« 5s</button>
-                        <button id="prev-btn" class="control-btn">⏮</button>
-                        <button id="play-btn" class="control-btn control-btn-main">▶</button>
-                        <button id="next-btn" class="control-btn">⏭</button>
-                        <button id="seek-forward-btn" class="control-btn control-btn-small">5s »</button>
-                        <button id="shuffle-btn" class="control-btn control-btn-small">🔀</button>
-                    </div>
+          <p class="shortcuts-hint">
+            Shortcuts: Space (play/pause), Hold Space (2× speed), ←/→ (seek), ↑/↓ (volume)
+          </p>
+        </div>
+      </section>
 
-                    <div class="volume-row">
-                        <button id="mute-btn" class="mute-btn">🔊</button>
-                        <input type="range" id="volume-bar" min="0" max="1" step="0.01" value="0.8">
-                    </div>
-                    <p class="shortcuts-hint">
-                        Shortcuts: Space (play/pause), Hold Space (2× speed), ←/→ (seek), ↑/↓ (volume)
-                    </p>
+      <aside class="playlist-panel">
+        <div class="playlist-header">
+          <div class="playlist-header-left">
+            <h3>Playlist</h3>
+            <span id="playlist-info" class="playlist-info"></span>
+          </div>
+          <label class="file-input-label">
+            <span>+ Add tracks</span>
+            <input type="file" id="file-input" accept="audio/*" multiple>
+          </label>
+        </div>
+        <ul id="playlist"></ul>
+      </aside>
+    </main>
+  </div>
 
-                </div>
-            </section>
-
-            <aside class="playlist-panel">
-                <div class="playlist-header">
-                    <h3>Playlist</h3>
-                    <span id="playlist-info" class="playlist-info"></span>
-                    <label class="file-input-label">
-                        <span>+ Add tracks</span>
-                        <input type="file" id="file-input" accept="audio/*" multiple>
-                    </label>
-                </div>
-                <ul id="playlist"></ul>
-            </aside>
-        </main>
+  <div id="mini-player" class="mini-player">
+    <img id="mini-cover" class="mini-cover" src="assets/img/default-cover.png" alt="Mini cover">
+    <div class="mini-info">
+      <p id="mini-title">Track Title</p>
+      <input type="range" id="mini-progress" min="0" max="100" value="0" step="0.1">
     </div>
+    <button id="mini-play" class="mini-play">▶</button>
+  </div>
 
-    <audio id="audio"></audio>
-    <script src="script.js"></script>
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
 </body>
-
 </html>

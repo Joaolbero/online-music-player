@@ -306,6 +306,24 @@ function buildPlaylist() {
     playlistEl.appendChild(li);
   });
   updatePlaylistActive();
+  function updatePlaylistInfo() {
+  const infoEl = document.getElementById("playlist-info");
+
+  let totalSeconds = 0;
+
+  tracks.forEach(t => {
+    if (t.lengthDisplay) {
+      const [m, s] = t.lengthDisplay.split(":").map(Number);
+      totalSeconds += m * 60 + s;
+    }
+  });
+
+  const totalMin = Math.floor(totalSeconds / 60);
+  const totalSec = totalSeconds % 60;
+  const totalFormatted = `${totalMin}:${String(totalSec).padStart(2, "0")}`;
+
+  infoEl.textContent = `${tracks.length} tracks · ${totalFormatted} total`;
+}
 }
 
 function handleFilesSelected(event) {
