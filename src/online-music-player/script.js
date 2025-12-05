@@ -19,6 +19,8 @@ const seekBackBtn = document.getElementById("seek-back-btn");
 const seekForwardBtn = document.getElementById("seek-forward-btn");
 const coverImageEl = document.querySelector(".cover-image");
 const DEFAULT_COVER = "assets/img/default-cover.png";
+const themeToggleBtn = document.getElementById("theme-toggle");
+let currentTheme = "dark";
 
 let tracks = [
   {
