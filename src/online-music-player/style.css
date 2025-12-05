@@ -552,3 +552,14 @@ body.light-theme #playlist li.active {
 .disc-center {
   display: none !important;
 }
+.shortcuts-hint {
+  margin-top: -6px;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #7faafc;
+  opacity: 0.8;
+}
+
+body.light-theme .shortcuts-hint {
+  color: #2d5c9e;
+}
