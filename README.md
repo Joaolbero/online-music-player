@@ -1,139 +1,103 @@
 # 🎧 Online Music Player
 
+[//]: # (Badges)
 <p align="center">
-  <img src="src/online-music-player/assets/img/logo.png" alt="Online Music Player Logo" width="120">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/status-active-00b894?style=for-the-badge" alt="Status: Active">
-  <img src="https://img.shields.io/badge/project%20type-frontend-0984e3?style=for-the-badge" alt="Project Type: Frontend">
-  <img src="https://img.shields.io/badge/tech%20stack-HTML%20%7C%20CSS%20%7C%20JavaScript-6c5ce7?style=for-the-badge" alt="Tech Stack">
-  <img src="https://img.shields.io/badge/dependencies-none-2d3436?style=for-the-badge" alt="Dependencies: None">
-  <img src="https://img.shields.io/badge/features-playlist%20%7C%20volume%20%7C%20animations-341f97?style=for-the-badge" alt="Features">
-  <img src="https://img.shields.io/badge/license-MIT-636e72?style=for-the-badge" alt="License: MIT">
-  <img src="https://img.shields.io/badge/version-1.0.0-0984e3?style=for-the-badge" alt="Version 1.0.0">
+  <!-- Ajustar depois com o nome real do repositório -->
   <a href="https://github.com/Joaolbero/online-music-player">
-    <img src="https://img.shields.io/badge/github-Joaolbero-1e3799?style=for-the-badge" alt="GitHub João Albero">
+    <img alt="Repo size" src="https://img.shields.io/github/repo-size/Joaolbero/online-music-player?style=for-the-badge">
   </a>
-  <img src="https://img.shields.io/github/last-commit/Joaolbero/online-music-player?style=for-the-badge" alt="Last Commit">
+  <a href="https://github.com/Joaolbero/online-music-player">
+    <img alt="Last commit" src="https://img.shields.io/github/last-commit/Joaolbero/online-music-player?style=for-the-badge">
+  </a>
+  <a href="https://github.com/Joaolbero/online-music-player/issues">
+    <img alt="Issues" src="https://img.shields.io/github/issues/Joaolbero/online-music-player?style=for-the-badge">
+  </a>
+  <a href="https://github.com/Joaolbero/online-music-player/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/Joaolbero/online-music-player?style=for-the-badge">
+  </a>
 </p>
-
-<br>
-
-<table>
-  <tr>
-    <td>
-
-### 🇧🇷 Visão Geral
-
-| Seção | Descrição |
-| --- | --- |
-| Nome | Online Music Player |
-| Tipo | Player de músicas web com foco em UI moderna e animações |
-| Objetivo | Demonstrar manipulação de DOM, controle de áudio, playlist e animações em JavaScript |
-| Tema visual | Dark futuristic (preto + azul + glitch) |
-
-### 🇧🇷 Funcionalidades
-
-| Funcionalidade | Detalhes |
-| --- | --- |
-| Player básico | Play, pause, próxima e anterior |
-| Barra de progresso | Progresso interativo com seek na música |
-| Controle de volume | Slider de volume com feedback visual |
-| Lista de músicas | Playlist clicável com destaque da faixa ativa |
-| Animação | Disco girando quando a música está tocando |
-| Responsividade | Layout adaptado para desktop e mobile |
-
-### 🇧🇷 Tecnologias
-
-| Categoria | Tecnologias |
-| --- | --- |
-| Estrutura | HTML5 |
-| Estilo | CSS3 (dark theme, neon blue, glitch vibes) |
-| Lógica | JavaScript (DOM, eventos, áudio) |
-
-### 🇧🇷 Como executar
-
-| Passo | Ação |
-| --- | --- |
-| 1 | Clone este repositório no seu computador |
-| 2 | Navegue até `src/online-music-player/` |
-| 3 | Adicione seus arquivos `.mp3` na pasta `assets/music/` |
-| 4 | Atualize a lista de músicas no `script.js`, se necessário |
-| 5 | Abra `index.html` no navegador |
-| 6 | (Opcional) Publique via GitHub Pages apontando para esta pasta |
-
-### 🇧🇷 Estrutura de pastas
-
-| Caminho | Descrição |
-| --- | --- |
-| `src/online-music-player/` | Código-fonte do projeto |
-| `assets/music/` | Arquivos de áudio `.mp3` |
-| `assets/img/` | Ícones, logo e favicon |
-| `tests/` | Pasta reservada para testes futuros |
-| `README.md` | Documentação bilíngue do projeto |
-| `LICENSE` | Licença MIT |
-
-</td>
-<td>
-
-### 🇺🇸 Overview
-
-| Section | Description |
-| --- | --- |
-| Name | Online Music Player |
-| Type | Web music player focused on modern UI and animations |
-| Goal | Showcase DOM manipulation, audio control, playlist and animations in JavaScript |
-| Visual theme | Dark futuristic (black + blue + glitch) |
-
-### 🇺🇸 Features
-
-| Feature | Details |
-| --- | --- |
-| Basic player | Play, pause, next and previous track |
-| Progress bar | Interactive progress with seek control |
-| Volume control | Volume slider with visual feedback |
-| Playlist | Clickable playlist with active track highlight |
-| Animation | Spinning disc while the track is playing |
-| Responsive | Layout adapted for desktop and mobile |
-
-### 🇺🇸 Tech Stack
-
-| Category | Technologies |
-| --- | --- |
-| Structure | HTML5 |
-| Styling | CSS3 (dark theme, neon blue, glitch vibes) |
-| Logic | JavaScript (DOM, events, audio) |
-
-### 🇺🇸 How to run
-
-| Step | Action |
-| --- | --- |
-| 1 | Clone this repository to your machine |
-| 2 | Go to `src/online-music-player/` |
-| 3 | Add your `.mp3` files into the `assets/music/` folder |
-| 4 | Update the track list in `script.js` if needed |
-| 5 | Open `index.html` in your browser |
-| 6 | (Optional) Deploy using GitHub Pages pointing to this folder |
-
-### 🇺🇸 Folder structure
-
-| Path | Description |
-| --- | --- |
-| `src/online-music-player/` | Project source code |
-| `assets/music/` | `.mp3` audio files |
-| `assets/img/` | Icons, logo and favicon |
-| `tests/` | Reserved folder for future tests |
-| `README.md` | Bilingual project documentation |
-| `LICENSE` | MIT License |
-
-</td>
-  </tr>
-</table>
 
 ---
 
-👤 Autor | Author  
+## 📌 Visão geral · Overview
 
-Criado por João Albero · 2025  
-Created by João Albero · 2025
+| 🇧🇷 PT-BR | 🇺🇸 EN |
+| --- | --- |
+| O **Online Music Player** é um player de música em HTML, CSS e JavaScript, com visual futurista em neon azul, suporte a temas _dark/light_ e carregamento de faixas locais. O usuário pode adicionar arquivos de áudio do próprio computador, controlar a reprodução, volume, atalho de teclado e visualizar a playlist com indicação de faixa atual e próxima. | **Online Music Player** is a music player built with HTML, CSS and JavaScript, featuring a futuristic neon blue look, dark/light themes and local file loading. Users can add audio files from their computer, control playback and volume, use keyboard shortcuts and see the playlist with “now playing” and “up next” indicators. |
+
+---
+
+## 🎼 Funcionalidades · Features
+
+| 🇧🇷 PT-BR | 🇺🇸 EN |
+| --- | --- |
+| ✅ Reprodução de faixas locais (`input type="file"`) | ✅ Local track playback (`input type="file"`) |
+| ✅ Playlist com título, artista, duração e status **Now / Next** | ✅ Playlist with title, artist, duration and **Now / Next** status |
+| ✅ Botões: play/pause, próxima, anterior, retroceder/avançar 5s | ✅ Buttons: play/pause, next, previous, seek -5s / +5s |
+| ✅ Controles de volume + mute/unmute | ✅ Volume control + mute/unmute |
+| ✅ Modos **repeat** (faixa única) e **shuffle** | ✅ **Repeat one** and **shuffle** modes |
+| ✅ Disco/Capa girando em sincronia com a música | ✅ Spinning disc/cover synced with playback |
+| ✅ Atalhos de teclado (espaço, setas ↑ ↓ ← →) | ✅ Keyboard shortcuts (space, arrow keys ↑ ↓ ← →) |
+| ✅ Segurar espaço por 3 segundos: reprodução em 2× enquanto estiver pressionado | ✅ Hold space for 3 seconds: temporary 2× playback speed |
+| ✅ Tema **dark/light** com persistência em `localStorage` | ✅ **Dark/light** theme with `localStorage` persistence |
+| ✅ Mini player fixo no mobile, sincronizado com o player principal | ✅ Fixed mini player on mobile, synced with main player |
+
+---
+
+## 🧠 Atalhos de teclado · Keyboard shortcuts
+
+| 🇧🇷 PT-BR | 🇺🇸 EN |
+| --- | --- |
+| **Espaço:** play/pause | **Space:** play/pause |
+| **Segurar espaço (3s):** velocidade 2× temporária | **Hold space (3s):** temporary 2× speed |
+| **Seta → / ←:** avança/volta 5 segundos | **Arrow → / ←:** seek +5 / -5 seconds |
+| **Seta ↑ / ↓:** aumenta/diminui o volume | **Arrow ↑ / ↓:** volume up / down |
+
+---
+
+## 🗂️ Estrutura do projeto · Project structure
+
+| 🇧🇷 PT-BR | 🇺🇸 EN |
+| --- | --- |
+| Abaixo está um resumo da estrutura de pastas do projeto: | Below is a summary of the project folder structure: |
+
+```text
+assets/
+  img/
+    logo.png          # ícone do player / page icon
+    favicon.png       # favicon do navegador
+    default-cover.png # capa padrão das músicas
+  music/
+    .gitkeep          # placeholder para a pasta de músicas locais
+index.html
+style.css
+script.js
+README.md
+LICENSE
+.gitignore
+
+| 🇧🇷 PT-BR                                                                                                                                                                                                                                 | 🇺🇸 EN                                                                                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Por padrão, a pasta `assets/music/` **não é versionada** (veja o `.gitignore`). As faixas utilizadas nos testes (ex.: Aka Rasta, Leviano, etc.) são apenas para uso pessoal/local e **não devem ser enviadas para o repositório público**. | By default, the `assets/music/` folder is **not versioned** (see `.gitignore`). Tracks used for local tests (e.g. Aka Rasta, Leviano, etc.) are for personal/local use only and **should not be pushed to the public repository**. |
+| Ao clonar o projeto, o usuário deve adicionar seus próprios arquivos `.mp3` ou outros formatos suportados dentro de `assets/music/` ou carregá-los pelo botão **“+ Add tracks”** no próprio player.                                        | When cloning the project, users must add their own `.mp3` (or other supported formats) inside `assets/music/` or load them using the **“+ Add tracks”** button in the player interface.                                            |
+
+🚀 Como executar localmente · How to run locally
+
+| 🇧🇷 PT-BR                                                                                                              | 🇺🇸 EN                                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 1. Clone o repositório:<br>`git clone https://github.com/Joaolbero/online-music-player.git`<br>`cd online-music-player` | 1. Clone the repository:<br>`git clone https://github.com/Joaolbero/online-music-player.git`<br>`cd online-music-player` |
+| 2. Opcional: adicione seus `.mp3` em `assets/music/` (apenas local)                                                     | 2. Optional: add your `.mp3` files in `assets/music/` (local only)                                                       |
+| 3. Abra o `index.html` no navegador ou use uma extensão de **Live Server** no VS Code                                   | 3. Open `index.html` in your browser or use a **Live Server** extension in VS Code                                       |
+| 4. Use o botão **“+ Add tracks”** para escolher as músicas do seu computador                                            | 4. Use the **“+ Add tracks”** button to choose songs from your computer                                                  |
+
+🌐 Deploy (GitHub Pages)
+
+| 🇧🇷 PT-BR                                                                                                                         | 🇺🇸 EN                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Depois de subir o projeto, você pode publicar via **GitHub Pages** usando a branch `main` como fonte e a pasta raiz como conteúdo. | After pushing the project, you can publish it via **GitHub Pages** using the `main` branch as the source and the root folder as the site content. |
+
+📄 Licença · License
+
+| 🇧🇷 PT-BR                                                                                       | 🇺🇸 EN                                                                                      |
+| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Este projeto está licenciado sob a licença **MIT**. Veja o arquivo `LICENSE` para mais detalhes. | This project is licensed under the **MIT** license. See the `LICENSE` file for more details. |
