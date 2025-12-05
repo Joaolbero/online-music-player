@@ -4,3 +4,6 @@ dist/
 .DS_Store
 Thumbs.db
 *.log
+# Não versionar músicas locais
+assets/music/*
+!assets/music/.gitkeep
