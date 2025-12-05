@@ -439,6 +439,13 @@ themeToggleBtn.addEventListener("click", () => {
 });
 
 window.addEventListener("load", () => {
+  const savedTheme = localStorage.getItem("onlineMusicPlayerTheme");
+  if (savedTheme === "light") {
+    applyTheme("light");
+  } else {
+    applyTheme("dark");
+  }
+
   buildPlaylist();
   setTrack(currentTrackIndex);
   volumeBar.value = 0.8;
