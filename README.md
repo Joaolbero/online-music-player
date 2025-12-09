@@ -1,27 +1,21 @@
+<p align="center">
+  <img src="./src/online-music-player/assets/img/icon.png" alt="Online Music Player Icon" width="200" height="200">
+</p>
+
 # 🎧 Online Music Player
 
-[//]: # (Badges)
 <p align="center">
-
-  <!-- Repository -->
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/Joaolbero/online-music-player?color=1e90ff&style=for-the-badge">
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Joaolbero/online-music-player?color=1e90ff&style=for-the-badge">
-  <img alt="License" src="https://img.shields.io/github/license/Joaolbero/online-music-player?color=1e90ff&style=for-the-badge">
-  
-  <!-- Tech -->
-  <img alt="HTML" src="https://img.shields.io/badge/HTML-ff6347?style=for-the-badge&logo=html5&logoColor=white">
-  <img alt="CSS" src="https://img.shields.io/badge/CSS-1e90ff?style=for-the-badge&logo=css3&logoColor=white">
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-f7df1e?style=for-the-badge&logo=javascript&logoColor=000">
-
-  <!-- Status -->
-  <img alt="Status" src="https://img.shields.io/badge/STATUS-ACTIVE-32cd32?style=for-the-badge">
-  <img alt="Version" src="https://img.shields.io/badge/VERSION-1.0.0-1e90ff?style=for-the-badge">
-
-  <!-- Deploy (adiciona após ativar Pages) -->
-  <a href="https://joaolbero.github.io/online-music-player/">
-    <img alt="Demo" src="https://img.shields.io/badge/ONLINE%20DEMO-1e90ff?style=for-the-badge&logo=github">
+  <img src="https://img.shields.io/badge/STATUS-active-brightgreen?style=for-the-badge">
+  <img src="https://img.shields.io/badge/PROJECT_TYPE-frontend-1e90ff?style=for-the-badge">
+  <img src="https://img.shields.io/badge/TECH_STACK-HTML,_CSS,_JavaScript-f7df1e?style=for-the-badge">
+  <img src="https://img.shields.io/badge/DEPENDENCIES-none-lightgrey?style=for-the-badge">
+  <img src="https://img.shields.io/badge/FEATURES-local_tracks,_themes,_shortcuts-1e90ff?style=for-the-badge">
+  <img src="https://img.shields.io/badge/LICENSE-MIT-32cd32?style=for-the-badge">
+  <img src="https://img.shields.io/badge/VERSION-1.0.0-1e90ff?style=for-the-badge">
+  <a href="https://github.com/Joaolbero">
+    <img alt="Author" src="https://img.shields.io/badge/AUTHOR-João_Albero-000000?style=for-the-badge&logo=github">
   </a>
-
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Joaolbero/online-music-player?style=for-the-badge&color=1e90ff">
 </p>
 
 ---
@@ -68,28 +62,32 @@
 | --- | --- |
 | Abaixo está um resumo da estrutura de pastas do projeto: | Below is a summary of the project folder structure: |
 
-assets/
-  img/
-    logo.png          # ícone do player / page icon
-    favicon.png       # favicon do navegador
-    default-cover.png # capa padrão das músicas
-  music/
-    .gitkeep          # placeholder para a pasta de músicas locais
-index.html
-style.css
-script.js
-README.md
-LICENSE
-.gitignore
+assets/  
+&nbsp;&nbsp;img/  
+&nbsp;&nbsp;&nbsp;&nbsp;logo.png          # ícone do player / page icon  
+&nbsp;&nbsp;&nbsp;&nbsp;favicon.png       # favicon do navegador  
+&nbsp;&nbsp;&nbsp;&nbsp;default-cover.png # capa padrão das músicas  
+&nbsp;&nbsp;music/  
+&nbsp;&nbsp;&nbsp;&nbsp;.gitkeep          # placeholder para a pasta de músicas locais  
+index.html  
+style.css  
+script.js  
+README.md  
+LICENSE  
+.gitignore  
 
-🎵 Músicas e direitos autorais · Music and copyright
+---
+
+## 🎵 Músicas e direitos autorais · Music and copyright
 
 | 🇧🇷 PT-BR                                                                                                                                                                                                                                 | 🇺🇸 EN                                                                                                                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Por padrão, a pasta `assets/music/` **não é versionada** (veja o `.gitignore`). As faixas utilizadas nos testes (ex.: Aka Rasta, Leviano, etc.) são apenas para uso pessoal/local e **não devem ser enviadas para o repositório público**. | By default, the `assets/music/` folder is **not versioned** (see `.gitignore`). Tracks used for local tests (e.g. Aka Rasta, Leviano, etc.) are for personal/local use only and **should not be pushed to the public repository**. |
 | Ao clonar o projeto, o usuário deve adicionar seus próprios arquivos `.mp3` ou outros formatos suportados dentro de `assets/music/` ou carregá-los pelo botão **“+ Add tracks”** no próprio player.                                        | When cloning the project, users must add their own `.mp3` (or other supported formats) inside `assets/music/` or load them using the **“+ Add tracks”** button in the player interface.                                            |
 
-🚀 Como executar localmente · How to run locally
+---
+
+## 🚀 Como executar localmente · How to run locally
 
 | 🇧🇷 PT-BR                                                                                                              | 🇺🇸 EN                                                                                                                  |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -98,14 +96,25 @@ LICENSE
 | 3. Abra o `index.html` no navegador ou use uma extensão de **Live Server** no VS Code.                                  | 3. Open `index.html` in your browser or use a **Live Server** extension in VS Code.                                      |
 | 4. Use o botão **“+ Add tracks”** para escolher as músicas do seu computador.                                           | 4. Use the **“+ Add tracks”** button to choose songs from your computer.                                                 |
 
-🌐 Deploy (GitHub Pages)
+---
+
+## 🌐 Deploy (GitHub Pages)
 
 | 🇧🇷 PT-BR                                                                                                                         | 🇺🇸 EN                                                                                                                                           |
 | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Depois de subir o projeto, você pode publicar via **GitHub Pages** usando a branch `main` como fonte e a pasta raiz como conteúdo. | After pushing the project, you can publish it via **GitHub Pages** using the `main` branch as the source and the root folder as the site content. |
 
-📄 Licença · License
+---
+
+## 📄 Licença · License
 
 | 🇧🇷 PT-BR                                                                                       | 🇺🇸 EN                                                                                      |
 | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
 | Este projeto está licenciado sob a licença **MIT**. Veja o arquivo `LICENSE` para mais detalhes. | This project is licensed under the **MIT** license. See the `LICENSE` file for more details. |
+
+---
+
+## 👤 Autor | Author
+
+Criado por João Albero · 2025  
+Created by João Albero · 2025
